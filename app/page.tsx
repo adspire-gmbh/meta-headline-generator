@@ -112,7 +112,7 @@ export default function Home() {
       <div className="w-full max-w-2xl space-y-8">
         <div className="text-center">
           <h1 className="text-3xl font-bold text-gray-900">
-            Meta Headline Generator
+            Meta Headline Generator V1
           </h1>
           <p className="mt-2 text-gray-600">
             Generiere Facebook/Meta Ad Headlines aus einer Angebots-URL

@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Meta Headline Generator",
+  title: "Meta Headline Generator V1",
   description: "Generiere Facebook/Meta Ad Headlines aus einer Angebots-URL",
 };
 
