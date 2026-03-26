@@ -27,7 +27,7 @@ export interface AdCopyResult {
 export async function analyzeAndGenerateHeadlines(
   url: string
 ): Promise<AnalysisResult> {
-  const cached = getCache<AnalysisResult>(url, "headline_analysis");
+  const cached = await getCache<AnalysisResult>(url, "headline_analysis");
   if (cached) return cached;
 
   const messages: Anthropic.MessageParam[] = [
@@ -130,7 +130,7 @@ Antworte ausschließlich im folgenden JSON-Format, ohne zusätzlichen Text:
   }
 
   const result = JSON.parse(jsonStr) as AnalysisResult;
-  setCache(url, "headline_analysis", result);
+  await setCache(url, "headline_analysis", result);
   return result;
 }
 
@@ -246,7 +246,7 @@ Antworte ausschließlich im folgenden JSON-Format, ohne zusätzlichen Text:
 export async function analyzeUrlForCopyCreator(
   url: string
 ): Promise<UrlAnalysisResult> {
-  const cached = getCache<UrlAnalysisResult>(url, "copy_creator_analysis");
+  const cached = await getCache<UrlAnalysisResult>(url, "copy_creator_analysis");
   if (cached) return cached;
 
   const messages: Anthropic.MessageParam[] = [
@@ -331,7 +331,7 @@ Antworte ausschließlich im folgenden JSON-Format, ohne zusätzlichen Text:
   }
 
   const result = JSON.parse(jsonStr) as UrlAnalysisResult;
-  setCache(url, "copy_creator_analysis", result);
+  await setCache(url, "copy_creator_analysis", result);
   return result;
 }
 
