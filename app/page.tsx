@@ -108,7 +108,7 @@ export default function Home() {
   }
 
   return (
-    <div className="flex min-h-screen flex-col items-center bg-gray-50 px-4 py-12">
+    <div className="flex flex-col items-center bg-gray-50 px-4 py-12 min-h-full">
       <div className="w-full max-w-2xl space-y-8">
         <div className="text-center">
           <h1 className="text-3xl font-bold text-gray-900">
